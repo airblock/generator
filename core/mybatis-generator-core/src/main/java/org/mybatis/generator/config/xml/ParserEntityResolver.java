@@ -35,12 +35,13 @@ public class ParserEntityResolver implements EntityResolver {
         super();
     }
 
-    /*
+    /**
      * (non-Javadoc)
      * 
      * @see org.xml.sax.EntityResolver#resolveEntity(java.lang.String,
      * java.lang.String)
      */
+    @Override
     public InputSource resolveEntity(String publicId, String systemId)
             throws SAXException, IOException {
         if (XmlConstants.IBATOR_CONFIG_PUBLIC_ID.equalsIgnoreCase(publicId)) {

@@ -34,7 +34,7 @@
 <!--
   The generatorConfiguration element is the root element for configurations.
 -->
-<!ELEMENT generatorConfiguration (properties?, classPathEntry*, context+)>
+<!ELEMENT generatorConfiguration (properties?, classPathEntry?, context+)>
                         
 <!--
   The properties element is used to define a standard Java properties file
@@ -83,7 +83,7 @@
 -->
 <!ELEMENT classPathEntry EMPTY>
 <!ATTLIST classPathEntry
-  location CDATA #REQUIRED>
+  location CDATA "D:\codes\mybatisGenerator\core\mybatis-generator-core\src\main\resources\lib\mysql-connector-java-5.1.46.jar">
 
 <!--
   The property element is used to add custom properties to many of the generator's
@@ -150,7 +150,7 @@
   The table element is used to specify a database table that will be the source information
   for a set of generated objects.
 -->
-<!ELEMENT table (property*, generatedKey?, columnRenamingRule?, (columnOverride | ignoreColumn | ignoreColumnsByRegex)*) >
+<!ELEMENT table (property*, generatedKey?, columnRenamingRule?, (columnOverride | ignoreColumn | ignoreColumnsByRegex)*, dataGateway*) >
 <!ATTLIST table
   catalog CDATA #IMPLIED
   schema CDATA #IMPLIED
@@ -178,6 +178,9 @@
   The columnOverride element is used to change certain attributes of the column
   from their default values.
 -->
+<!ELEMENT dataGateway ()>
+
+
 <!ELEMENT columnOverride (property*)>
 <!ATTLIST columnOverride
   column CDATA #REQUIRED
