@@ -256,7 +256,6 @@
         <artifactId>mybatis</artifactId>
         <version>3.4.1</version>
       </dependency>
-      <!-- TODO: Raising above 2.4.0 required jdk 8 usage -->
       <dependency>
         <groupId>com.github.javaparser</groupId>
         <artifactId>javaparser-core</artifactId>

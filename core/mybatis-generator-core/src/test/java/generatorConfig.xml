@@ -33,7 +33,7 @@
         <!--生成对应表及类名-->
         <table tableName="city" domainObjectName="City" enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
-            <dataGateway />
+            <!--<cache/>-->
         </table>
     </context>
 </generatorConfiguration>

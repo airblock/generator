@@ -714,7 +714,7 @@ public class Context extends PropertyHolder {
         if (introspectedTables != null) {
             for (IntrospectedTable introspectedTable : introspectedTables) {
                 callback.checkCancel();
-
+                /** TODO: 生成MAPPING和DAO的代码， 可以参考用来实现DataGateway */
                 introspectedTable.initialize();
                 introspectedTable.calculateGenerators(warnings, callback);
                 generatedJavaFiles.addAll(introspectedTable
